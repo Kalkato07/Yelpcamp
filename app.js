@@ -23,7 +23,7 @@ const LocalStrategy = require('passport-local');
 const User = require('./models/user.js');
 const helmet = require('helmet');
 const MongoStore = require('connect-mongo');
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp-maptiler'
+const dbUrl = process.env.DB_URL;
 
 mongoose.connect(dbUrl)
 
