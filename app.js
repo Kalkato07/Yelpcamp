@@ -149,7 +149,7 @@ app.all(/(.*)/, (req, res, next) => {
 app.use((err, req, res, next) => {
     const { statusCode = 500 } = err;
     if (!err.message) err.message = 'Oh No, Something Went Wrong!'
-    res.status(statusCode).render('error', { err })
+    res.status(statusCode).render('Error', { err })
 })
 
 app.listen(3000, (req,res) => {
